@@ -23,8 +23,24 @@ class Counter extends Component {
         <h1>{number}</h1>
         <h2>바뀌지 않는 값: {fixedNumber}</h2>
         <button
+          /* 
           onClick={() => {
-            this.setState({ number: number + 1 });
+            // setState 메서드 사용시 state 값이 바로 바뀌지 않으므로, setState 메서드를 두 번 호출해도 1만 증가함 
+            //this.setState({ number: number + 1 });
+            //this.setState({ number: this.state.number + 1 });
+          }}
+          */
+          onClick={() => {
+            // setState 메서드에 함수를 전달하여 1씩 증가하는 문제 해결
+            this.setState((prevState) => {
+              return {
+                number: prevState.number + 1,
+              };
+            });
+
+            this.setState((prevState) => ({
+              number: prevState.number + 1,
+            }));
           }}
         >
           +1
