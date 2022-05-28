@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import MyComponent from './MyComponent';
+import MyClassComponent from './MyClassComponent';
 
 class App extends Component {
   render() {
@@ -8,6 +9,9 @@ class App extends Component {
         <MyComponent name={'react'} favoriteNumber={7}>
           {'3'}
         </MyComponent>
+        <br />
+
+        <MyClassComponent></MyClassComponent>
       </>
     );
   }
