@@ -5,7 +5,9 @@ class App extends Component {
   render() {
     return (
       <>
-        <MyComponent>리액트</MyComponent>
+        <MyComponent name={'react'} favoriteNumber={7}>
+          {'3'}
+        </MyComponent>
       </>
     );
   }
