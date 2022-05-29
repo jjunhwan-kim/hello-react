@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 //import MyComponent from './MyComponent';
 //import MyClassComponent from './MyClassComponent';
 import Counter from './Counter';
+import Say from './Say';
 
 class App extends Component {
   render() {
@@ -16,7 +17,9 @@ class App extends Component {
         <MyClassComponent></MyClassComponent>
         */}
 
-        <Counter></Counter>
+        {/* <Counter></Counter> */}
+
+        <Say />
       </>
     );
   }
